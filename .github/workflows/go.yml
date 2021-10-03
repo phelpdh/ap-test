@@ -18,7 +18,7 @@ jobs:
         with:
           protoc-version: '3.13.0'
           enable-grpc: true
-      - run: protoc -Isrc/main/proto src/main/proto/* --go_out=generated --go-grpc_out=generated
+      - run: protoc -Isrc/main/proto src/main/proto/* --go_out=src/main/proto/generated --go-grpc_out=src/main/proto/generated
 
       - name: Set up Go
         uses: actions/setup-go@v2
