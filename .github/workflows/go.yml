@@ -17,7 +17,7 @@ jobs:
         uses: abelfodil/protoc-action@v1
         with:
           protoc-version: '3.13.0'
-          enable-grpc: true
+          enable-grpc: false
       - run: protoc -Isrc/main/proto src/main/proto/* --go_out=src/main/proto/generated --go-grpc_out=src/main/proto/generated
 
       - name: Set up Go
